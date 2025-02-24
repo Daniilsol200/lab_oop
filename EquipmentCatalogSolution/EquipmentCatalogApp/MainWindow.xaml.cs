@@ -15,6 +15,8 @@ namespace EquipmentCatalogApp
             InitializeComponent();
             _manager = new EquipmentCatalogManager("equipment.xml", "equipment.xsd");
             _equipments = new List<Equipment>();
+            // Подписка на событие закрытия окна
+            this.Closing += MainWindow_Closing;
         }
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
@@ -43,6 +45,23 @@ namespace EquipmentCatalogApp
             {
                 MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 StatusText.Text = "Ошибка сохранения";
+            }
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                if (_equipments != null && _equipments.Count > 0)
+                {
+                    _manager.SaveCatalog(_equipments);
+                    StatusText.Text = "Данные автоматически сохранены при закрытии";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при автоматическом сохранении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                StatusText.Text = "Ошибка автоматического сохранения";
             }
         }
     }

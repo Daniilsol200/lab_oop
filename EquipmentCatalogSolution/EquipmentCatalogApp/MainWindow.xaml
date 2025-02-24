@@ -21,9 +21,9 @@
                 <DataGridComboBoxColumn Header="Организация" SelectedItemBinding="{Binding OwnerOrganization}" Width="*">
                     <DataGridComboBoxColumn.ItemsSource>
                         <x:Array Type="{x:Type sys:String}">
-                            <sys:String>ООО "ТехноПрогресс"</sys:String>
-                            <sys:String>АО "Машинострой"</sys:String>
-                            <sys:String>ЗАО "ПромТех"</sys:String>
+                            <sys:String>ООО ТехноПрогресс</sys:String>
+                            <sys:String>АО Машинострой</sys:String>
+                            <sys:String>ЗАО ПромТех</sys:String>
                         </x:Array>
                     </DataGridComboBoxColumn.ItemsSource>
                 </DataGridComboBoxColumn>
