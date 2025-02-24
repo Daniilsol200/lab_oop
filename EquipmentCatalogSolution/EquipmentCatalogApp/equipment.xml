@@ -2,14 +2,14 @@
 <EquipmentCatalog>
 	<Equipment>
 		<Name>Лазерный станок</Name>
-		<OwnerOrganization>ООО "ТехноПрогресс"</OwnerOrganization>
-		<Cost>1500000.50</Cost>
+		<OwnerOrganization>ООО 'ТехноПрогресс'</OwnerOrganization>
+		<Cost>1500050</Cost>
 		<ManufactureYear>2020</ManufactureYear>
 	</Equipment>
 	<Equipment>
 		<Name>Фрезерный станок</Name>
-		<OwnerOrganization>АО "Машинострой"</OwnerOrganization>
-		<Cost>2500000.75</Cost>
+		<OwnerOrganization>АО 'Машинострой'</OwnerOrganization>
+		<Cost>250000</Cost>
 		<ManufactureYear>2019</ManufactureYear>
 	</Equipment>
 </EquipmentCatalog>

@@ -1,12 +1,41 @@
 ﻿<Window x:Class="EquipmentCatalogApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EquipmentCatalogApp"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Справочник оборудования" Height="400" Width="600">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <Button x:Name="LoadButton" Content="Загрузить" Click="LoadButton_Click" Margin="5"/>
+            <Button x:Name="SaveButton" Content="Сохранить" Click="SaveButton_Click" Margin="5"/>
+        </StackPanel>
+
+        <DataGrid x:Name="EquipmentGrid" Grid.Row="1" Margin="5" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Name}" Width="*"/>
+                <DataGridComboBoxColumn Header="Организация" SelectedItemBinding="{Binding OwnerOrganization}" Width="*">
+                    <DataGridComboBoxColumn.ItemsSource>
+                        <x:Array Type="{x:Type sys:String}">
+                            <sys:String>ООО "ТехноПрогресс"</sys:String>
+                            <sys:String>АО "Машинострой"</sys:String>
+                            <sys:String>ЗАО "ПромТех"</sys:String>
+                        </x:Array>
+                    </DataGridComboBoxColumn.ItemsSource>
+                </DataGridComboBoxColumn>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Cost}" Width="*"/>
+                <DataGridTextColumn Header="Год" Binding="{Binding ManufactureYear}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock x:Name="StatusText" Text="Готово"/>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>

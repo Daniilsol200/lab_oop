@@ -1,0 +1,6 @@
+C:\Users\danii\OneDrive\Desktop\Works\OOP2\EquipmentCatalogSolution\EquipmentCatalogLibrary\bin\Debug\EquipmentCatalogLibrary.dll
+C:\Users\danii\OneDrive\Desktop\Works\OOP2\EquipmentCatalogSolution\EquipmentCatalogLibrary\bin\Debug\EquipmentCatalogLibrary.pdb
+C:\Users\danii\OneDrive\Desktop\Works\OOP2\EquipmentCatalogSolution\EquipmentCatalogLibrary\obj\Debug\EquipmentCatalogLibrary.csproj.AssemblyReference.cache
+C:\Users\danii\OneDrive\Desktop\Works\OOP2\EquipmentCatalogSolution\EquipmentCatalogLibrary\obj\Debug\EquipmentCatalogLibrary.csproj.CoreCompileInputs.cache
+C:\Users\danii\OneDrive\Desktop\Works\OOP2\EquipmentCatalogSolution\EquipmentCatalogLibrary\obj\Debug\EquipmentCatalogLibrary.dll
+C:\Users\danii\OneDrive\Desktop\Works\OOP2\EquipmentCatalogSolution\EquipmentCatalogLibrary\obj\Debug\EquipmentCatalogLibrary.pdb
