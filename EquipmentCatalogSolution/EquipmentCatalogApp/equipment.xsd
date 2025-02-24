@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="EquipmentCatalog">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Equipment" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Name" type="xs:string"/>
+							<xs:element name="OwnerOrganization">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="ООО 'ТехноПрогресс'"/>
+										<xs:enumeration value="АО 'Машинострой'"/>
+										<xs:enumeration value="ЗАО 'ПромТех'"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Cost" type="xs:decimal">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="0"/>
+										<xs:maxInclusive value="10000000"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ManufactureYear" type="xs:int">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:minInclusive value="1900"/>
+										<xs:maxInclusive value="2025"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
